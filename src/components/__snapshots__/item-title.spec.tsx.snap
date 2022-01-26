@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemTitle component renders news item properties passed in as props 1`] = `
+<body>
+  <div>
+    <tr
+      class="athing"
+    >
+      <td
+        class="title"
+        style="text-align: right; vertical-align: top;"
+      >
+        <span
+          class="rank"
+        >
+          1.
+        </span>
+      </td>
+      <td
+        class="votelinks"
+        style="vertical-align: top;"
+      >
+        <div
+          style="text-align: center;"
+        >
+          <a
+            class=" "
+            href="/vote?id=1224&how=up&goto=/"
+            style="cursor: pointer;"
+          >
+            <div
+              class="votearrow"
+              title="upvote"
+            />
+          </a>
+        </div>
+      </td>
+      <td
+        class="title"
+      >
+        <a
+          class="storylink"
+          href="https://www.nytimes.com/2017/08/04/education/edlife/learning-how-to-learn-barbara-oakley.html?hpw&rref=education&action=click&pgtype=Homepage&module=well-region&region=bottom-well&WT.nav=bottom-well"
+        >
+          “Learning How to Learn,” the most popular course on Coursera
+        </a>
+        <span
+          class="sitebit comhead"
+        >
+           
+          (
+          <a
+            href="from?site=www.nytimes.com"
+          >
+            <span
+              class="sitestr"
+            >
+              www.nytimes.com
+            </span>
+          </a>
+          )
+        </span>
+      </td>
+    </tr>
+  </div>
+</body>
+`;

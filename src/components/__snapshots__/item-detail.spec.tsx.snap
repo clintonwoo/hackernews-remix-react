@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemDetail component renders news items passed in as props 1`] = `
+<body>
+  <div>
+    <tr>
+      <td
+        colspan="2"
+      />
+      <td
+        class="subtext"
+      >
+        <span
+          class="score"
+        >
+          171
+           points
+        </span>
+         by 
+        <a
+          class="hnuser"
+          href="/user?id=hvo"
+        >
+          hvo
+        </a>
+         
+        <span
+          class="age"
+        >
+          <a
+            href="/item?id=1224"
+          >
+            14 days ago
+          </a>
+        </span>
+         | 
+        <a
+          href="/hide?id=1224&how=up&goto=news"
+          style="cursor: pointer;"
+        >
+          hide
+        </a>
+         | 
+        <a
+          href="/item?id=1224"
+        >
+          44 comments
+        </a>
+      </td>
+    </tr>
+  </div>
+</body>
+`;
