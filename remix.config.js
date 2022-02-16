@@ -5,7 +5,7 @@ module.exports = {
   appDirectory: 'src',
   assetsBuildDirectory: 'public/build',
   publicPath: '/build/',
-  serverBuildDirectory: 'build',
+  serverBuildTarget: 'node-cjs',
   devServerPort: 3001,
   ignoredRouteFiles: ['.*'],
 };

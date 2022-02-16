@@ -80,7 +80,7 @@ Or you can do a regular build and start using `npm run build` and `npm run start
 
 You can download and run the repo with one command to rule them all:
 
-`git clone https://github.com/clintonwoo/hackernews-remix-react.git && cd hackernews-remix-react && npm install && npm run dev`
+`git clone https://github.com/clintonwoo/hackernews-remix-react.git && cd hackernews-remix-react && npm install && npm run build && npm run dev`
 
 ## Contributing
 
