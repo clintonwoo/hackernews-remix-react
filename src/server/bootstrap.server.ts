@@ -1,5 +1,5 @@
-import { initializeApp } from 'firebase/app';
-import { getDatabase, ref } from 'firebase/database';
+import { initializeApp } from '@firebase/app';
+import { getDatabase, ref } from '@firebase/database';
 
 import { dev, HN_API_VERSION, HN_DB_URI } from './config.server';
 import { HnCache } from './database/cache';

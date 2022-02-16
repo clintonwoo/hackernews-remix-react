@@ -1,6 +1,8 @@
+import { MetaFunction } from 'remix';
+
 import { BlankLayout } from '../../layouts/blank-layout';
 
-import dmcaCss from '../../../public/static/dmca.css';
+import dmcaCss from '../../assets/dmca.css';
 
 const spanStyle = { fontSize: '11.5pt', fontFamily: 'Helvetica', color: '#444444' };
 const paragraphStyle = { marginBottom: '7.5pt', lineHeight: 'normal', background: 'white' };

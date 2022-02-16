@@ -1,5 +1,5 @@
 import { debug } from 'debug';
-import { child, get, DatabaseReference } from 'firebase/database';
+import { child, get, DatabaseReference } from '@firebase/database';
 
 import type { HnCache } from './cache';
 import { CommentModel, FeedType, StoryModel, UserModel } from '../models';

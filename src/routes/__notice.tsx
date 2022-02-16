@@ -1,6 +1,6 @@
 import { Outlet } from 'remix';
 
-import ycCss from '../../public/static/yc.css';
+import ycCss from '../assets/yc.css';
 
 export const links = () => [{ rel: 'stylesheet', href: ycCss, type: 'text/css' }];
 

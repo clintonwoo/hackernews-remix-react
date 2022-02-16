@@ -4,7 +4,7 @@ import { getSession, SessionCookieProperties } from '../cookies';
 import { userService } from '../server/bootstrap.server';
 import { MeContext } from '../utils/context';
 
-import newsCss from '../../public/static/news.css';
+import newsCss from '../assets/news.css';
 
 export const links = () => [{ rel: 'stylesheet', href: newsCss, type: 'text/css' }];
 
