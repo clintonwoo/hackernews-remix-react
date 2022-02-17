@@ -67,7 +67,9 @@ The project implements the publically available parts of the Hacker News site AP
 
 ## Architecture overview
 
-<img alt="Hacker News clone architecture overview diagram" width="600" height="auto" src="docs/architecture.png">
+<p align="center">
+  <img alt="Hacker News clone architecture overview diagram" width="600" height="auto" src="docs/architecture.png">
+</p>
 
 Remix emphasises web primitives and fundamentals. So requests are made generally using Remix's `<Link>`s and `<Form>`s which add some extra functionality on top of the regular `<a>` and `<form>` tags.
 
