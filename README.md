@@ -30,25 +30,32 @@ The project implements the publically available parts of the Hacker News site AP
 - React (Declarative UI)
 - ESBuild (via Remix, sub-second production builds)
 - TypeScript (Static typing)
+- ESLint (Code checking)
 - Authentication via Cookies (plain JS)
 - Jest (Test runner)
 - Prettier (Code formatter)
+- Docker (Container builder)
 
 ### Benefits
 
 **UI**
 
 - Website works with JavaScript disabled (`Remix`)
+- Nested routes allow building complex UI applications that are also SSR capable (`Remix`)
+- Data fetching for client and server uses the same loader code (`Remix`)
+- Most apps can be built leveraging web fundamentals (form/anchor tag) requiring no state management library (`Remix`)
+- Data management is simple resulting in smaller codebase and client JS bundle sizes, approx ~30-50% smaller for this HN clone project compared to the GraphQL HN clone (`Remix`)
 - Declarative UI (`React`)
 - Minimalistic client-side UI rendering (`Remix`)
 - Pre-fetch page assets (`Remix`)
 - JS Code splitting (`Remix`)
-- Loading state spinners not required (`Remix`)
+- Loading state spinners not required by default (`Remix`)
 
 **Server**
 
 - Server Side rendering (`Remix`)
 - Universal TypeScript/JavaScript (`Web standards`)
+- Server can build a single JS file for optimized deployments (`Remix`)
 - Deployable on FaaS (Functions as a Service), edge workers or on your own NodeJS server (`Remix`)
 - Asset bundler (`ESBuild` via `Remix`)
 
