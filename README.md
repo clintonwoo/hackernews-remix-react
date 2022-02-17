@@ -11,7 +11,7 @@ This is a clone of Hacker News written in TypeScript using Remix and React.
 
 It is intended to be an example or boilerplate to help you structure your projects using production-ready technologies.
 
-The project implements the publically available parts of the Hacker News site API, with some remaining functionality implemented in-memory.
+The project implements the publicly available parts of the Hacker News site API, with some remaining functionality implemented in-memory.
 
 <p align="center" margin-bottom="0">
   <a href="https://remix.hnclone.win" target="_blank">
