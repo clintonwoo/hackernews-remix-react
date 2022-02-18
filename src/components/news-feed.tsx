@@ -75,18 +75,25 @@ export function NewsFeed(props: INewsFeedProps): JSX.Element {
                 .flatMap((newsItem, index) => [
                   <ItemTitle
                     key={`${newsItem.id}title`}
+                    id={newsItem.id}
                     isRankVisible={isRankVisible}
                     isUpvoteVisible={isUpvoteVisible}
                     rank={postsPerPage * (pageNumber - 1) + index + 1}
+                    title={newsItem.title}
                     upvoted={newsItem.didUserUpvote}
-                    {...newsItem}
+                    url={newsItem.url}
                   />,
                   <ItemDetail
                     key={`${newsItem.id}detail`}
+                    commentCount={newsItem.commentCount}
+                    creationTime={newsItem.creationTime}
+                    hidden={newsItem.hidden}
+                    id={newsItem.id}
                     isFavoriteVisible={false}
-                    isPostScrutinyVisible={isPostScrutinyVisible}
                     isJobListing={isJobListing}
-                    {...newsItem}
+                    isPostScrutinyVisible={isPostScrutinyVisible}
+                    submitterId={newsItem.submitterId}
+                    upvoteCount={newsItem.upvoteCount}
                   />,
                   <tr className="spacer" key={`${newsItem.id}spacer`} style={{ height: 5 }} />,
                 ])}

@@ -47,6 +47,7 @@ export function ClientStory(
     type,
     upvoteCount,
     upvotes,
+    url,
   }: StoryModel,
   userId: string | undefined
 ): IStory {
@@ -63,5 +64,6 @@ export function ClientStory(
     title,
     type,
     upvoteCount,
+    url,
   };
 }

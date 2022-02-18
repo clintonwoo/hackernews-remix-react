@@ -1,4 +1,4 @@
-import { useLoaderData, LoaderFunction } from 'remix';
+import { useLoaderData, LoaderFunction, MetaFunction } from 'remix';
 
 import { feedService } from '../../server/bootstrap.server';
 import { FeedType } from '../../server/models';
@@ -25,6 +25,12 @@ export const loader: LoaderFunction = async ({ request }): Promise<IIndexPageLoa
   const skip = POSTS_PER_PAGE * (pageNumber - 1);
 
   return { stories: await feedService.getForType(FeedType.TOP, first, skip, userId) };
+};
+
+export const meta: MetaFunction = () => {
+  return {
+    description: 'The top stories from technology and startup business hackers around the world.',
+  };
 };
 
 export default function IndexPage(): JSX.Element {

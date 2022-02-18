@@ -1,4 +1,4 @@
-import { useLocation } from 'remix';
+import { Link, useLocation } from 'remix';
 
 export interface IItemTitleProps {
   id: number;
@@ -6,8 +6,8 @@ export interface IItemTitleProps {
   isUpvoteVisible?: boolean;
   rank?: number;
   title: string;
-  url?: string;
-  upvoted?: boolean;
+  url: string | undefined;
+  upvoted: boolean;
 }
 
 export function ItemTitle(props: IItemTitleProps): JSX.Element {
@@ -25,29 +25,35 @@ export function ItemTitle(props: IItemTitleProps): JSX.Element {
       <td style={{ verticalAlign: 'top' }} className="votelinks">
         <div style={{ textAlign: 'center' }}>
           {isUpvoteVisible && (
-            <a
+            <Link
               className={upvoted ? 'nosee' : ' '}
-              href={`/vote?id=${id}&how=up&goto=${loc.pathname + loc.search}`}
+              to={`/vote?id=${id}&how=up&goto=${loc.pathname + loc.search}`}
               style={{ cursor: 'pointer' }}
             >
               <div className="votearrow" title="upvote" />
-            </a>
+            </Link>
           )}
         </div>
       </td>
       <td className="title">
-        <a className="storylink" href={url || `item?id=${id}`}>
-          {title}
-        </a>
-        {url && (
-          <span className="sitebit comhead">
-            {' '}
-            (
-            <a href={`from?site=${hostname}`}>
-              <span className="sitestr">{hostname}</span>
+        {url ? (
+          <>
+            <a className="storylink" href={url}>
+              {title}
             </a>
-            )
-          </span>
+            <span className="sitebit comhead">
+              {' '}
+              (
+              <Link to={`/from?site=${hostname}`}>
+                <span className="sitestr">{hostname}</span>
+              </Link>
+              )
+            </span>
+          </>
+        ) : (
+          <Link className="storylink" to={`/item?id=${id}`}>
+            {title}
+          </Link>
         )}
       </td>
     </tr>

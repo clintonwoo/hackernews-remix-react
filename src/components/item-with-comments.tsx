@@ -11,7 +11,19 @@ export interface INewsItemWithCommentsProps {
 
 /** Acts as the component for a page of a news item with all it's comments */
 export function ItemWithComments(props: INewsItemWithCommentsProps): JSX.Element {
-  const { newsItem } = props;
+  const {
+    newsItem: {
+      commentCount,
+      comments,
+      creationTime,
+      id,
+      rank,
+      submitterId,
+      title,
+      upvoteCount,
+      url,
+    },
+  } = props;
 
   return (
     <tr>
@@ -26,15 +38,29 @@ export function ItemWithComments(props: INewsItemWithCommentsProps): JSX.Element
           className="itemlist"
         >
           <tbody>
-            <ItemTitle isRankVisible={false} {...newsItem} />
-            <ItemDetail isPostScrutinyVisible {...newsItem} />
+            <ItemTitle
+              id={id}
+              rank={rank}
+              title={title}
+              url={url}
+              isRankVisible={false}
+              upvoted={false}
+            />
+            <ItemDetail
+              isPostScrutinyVisible
+              commentCount={commentCount}
+              id={id}
+              submitterId={submitterId}
+              upvoteCount={upvoteCount}
+              creationTime={creationTime}
+            />
             <tr key="morespace" className="morespace" style={{ height: '10px' }} />
-            <CommentBox parentId={newsItem.id} />
+            <CommentBox parentId={id} />
           </tbody>
         </table>
         <br />
         <br />
-        <Comments comments={newsItem.comments} shouldIndent />
+        <Comments comments={comments} shouldIndent />
         <br />
         <br />
       </td>

@@ -32,8 +32,12 @@ export const loader: LoaderFunction = async ({ request }): Promise<IItemPageLoad
   return { newsItem };
 };
 
-export const meta: MetaFunction = () => {
-  return { title: 'Item | Hacker News Clone' };
+export const meta: MetaFunction = ({ data }) => {
+  if (data) {
+    return { title: `${(data as IItemPageLoader).newsItem.title} | Hacker News Clone` };
+  }
+
+  return { title: 'Story not found | Hacker News Clone' };
 };
 
 export function ItemPage(): JSX.Element {
