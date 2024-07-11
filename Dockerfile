@@ -1,5 +1,5 @@
 # base node image
-FROM node:16.14-alpine3.14 as base
+FROM node:20.15-alpine3.19 as base
 
 # Install all node_modules, including dev dependencies
 FROM base as deps

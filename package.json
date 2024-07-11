@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "npm run clean && remix build",
-    "build:docker": "docker build --tag 'clintonwoo/hackernews-remix-react:latest' --rm . && docker run --rm -p 80:3000 --name hackernews-remix-react clintonwoo/hackernews-remix-react",
+    "build:docker": "docker build --tag 'clintonwoo/hackernews-remix-react:latest' --rm . && docker run --rm -p 8080:8080 --name hackernews-remix-react clintonwoo/hackernews-remix-react",
     "build:prod": "NODE_ENV=production npm run clean && remix build",
     "check": "tsc --noEmit",
     "clean": "rm -rf build && rm -rf public/build",
